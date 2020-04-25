@@ -1,0 +1,49 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tuvan_tochat
+
+entities:
+  - nganh_tc
+slots:
+  nganh_tc:
+      auto_fill: true
+      type : text
+
+responses:
+  utter_greet:
+  - text: "Xin chào! Bạn khỏe không ?"
+
+  utter_cheer_up:
+  - text: "Đây ! có lẽ nó sẽ mang đến điều thú vị cho bạn:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Tôi có thể giúp gì cho bạn ?"
+
+  utter_happy:
+  - text: "Tuyệt! Tôi có thể tư vấn gì cho bạn ?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Tôi là người máy."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_tuvan_tochat
+  - utter_goodbye
+  - utter_iamabot
+  - utter_happy
+  - utter_did_that_help
+  - utter_cheer_up
+  - utter_greet
